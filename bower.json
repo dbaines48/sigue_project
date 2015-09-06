@@ -1,0 +1,22 @@
+{
+  "name": "sigue_project",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dbaines48/sigue_project",
+  "authors": [
+    "Daniel Blanco",
+    "Fabian Betancur",
+    "Alexander Taborda"
+  ],
+  "description": "Design Software 2 Project",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-animate": "~1.4.5",
+    "angular-bootstrap": "~0.13.4",
+    "angular-route": "~1.4.5",
+    "bootstrap": "~3.3.5"
+  },
+  "install": {
+  	"path": "libs"
+  }
+}
