@@ -1,20 +1,22 @@
-angular.module('SigueProject', ['ngRoute'])
-.config(['$routeProvider', function($routeProvider) {
+angular.module('SigueProject', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
+.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       redirectTo: '/home'
     })
     .when('/subjects', {
-      templateUrl: 'templates/subjects/index.html'
+      templateUrl: 'templates/pages/subjects/index.html',
+      controller: 'SubjectsIndexController'
     })
     .when('/subjects/:id', {
-      templateUrl: 'templates/subjects/show.html'
+      templateUrl: 'templates/pages/subjects/show.html'
     })
     .when('/about', {
-      templateUrl: 'templates/annexes/about.html'
+      templateUrl: 'templates/pages/annexes/about.html'
     })
     .when('/contact', {
-      templateUrl: 'templates/annexes/contact.html'
+      templateUrl: 'templates/pages/annexes/contact.html',
+      controller: 'ContactController'
     })
     .otherwise({
       redirectTo: '/home'
