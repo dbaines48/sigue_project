@@ -1,16 +1,13 @@
 <div class="container">
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Course</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="matter in matters">
-        <td>{{matter.name}}</td>
-        <td>{{matter.course}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <flippy class="fancy" ng-click="flip()" flip-duration="800" timing-function="ease-in-out" ng-repeat="matter in matters">
+    <flippy-front>
+      <h1>Name</h1>
+      <h3>{{matter.name}}</h3>
+    </flippy-front>
+
+    <flippy-back>
+      <h1>Course</h1>
+      <h3>{{matter.course}}</h3>
+    </flippy-back>
+  </flippy>
 </div>

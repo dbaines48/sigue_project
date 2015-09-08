@@ -1,4 +1,4 @@
-angular.module('SigueProject', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
+angular.module('SigueProject', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'angular-flippy'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
     .when('/home', {
