@@ -10,7 +10,8 @@ angular.module('SigueProject')
       controller: 'HomeController'
     })
     .when('/about', {
-      templateUrl: 'templates/pages/annexes/about.html'
+      templateUrl: 'templates/pages/annexes/about.html',
+      controller: 'AboutController'
     })
     .when('/contact', {
       templateUrl: 'templates/pages/annexes/contact.html',

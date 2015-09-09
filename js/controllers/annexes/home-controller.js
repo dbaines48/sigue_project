@@ -1,5 +1,5 @@
 angular.module('SigueProject')
-.controller('HomeController', ['$scope', 'Go', function($scope, Go){
+.controller('HomeController', ['$scope', function($scope){
   $scope.myInterval = 3000;
 
   $scope.slides = [{
@@ -16,6 +16,6 @@ angular.module('SigueProject')
   }];
   
   $scope.go = function(url){
-    Go(url);
+    $location.url(url);
   };
 }]);
