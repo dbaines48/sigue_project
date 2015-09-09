@@ -30,19 +30,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a  href="#/home" class="hvr-underline-from-left"><img src="images/logo.png" width="45" height="45" style="margin-top:7px; margin-left:10px;"/></a>
+          <a href ng-click="go('/home')" class="hvr-underline-from-left"><img src="images/logo.png" width="45" height="45" style="margin-top:7px; margin-left:10px;"/></a>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right">
             <li class="hvr-underline-from-center" ng-class="{active: isActive('/subjects')}">
-              <a href="#/subjects">Mis Materias</a>
+              <a href ng-click="go('/subjects')">Mis Materias</a>
             </li>
             <li class="hvr-underline-from-center" ng-class="{active: isActive('/about')}">
-              <a href="#/about">About</a>
+              <a href ng-click="go('/about')">About</a>
             </li>
             <li class="hvr-underline-from-center" ng-class="{active: isActive('/contact')}">
-              <a href="#/contact">Contact</a>
+              <a href ng-click="go('/contact')">Contact</a>
             </li>
           </ul>
         </div>
@@ -74,6 +74,7 @@
     <!-- Services -->
     <script type="text/javascript" src="js/services/subject.js"></script>
     <script type="text/javascript" src="js/services/contact.js"></script>
+    <script type="text/javascript" src="js/services/go.js"></script>
 
   </body>
 </html>
