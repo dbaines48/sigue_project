@@ -1,9 +1,8 @@
-<form name="contactForm" ng-submit="contactForm.$valid && addReview()" novalidate>
+<form name="contactForm" ng-submit="contactForm.$valid && addReview(review)" novalidate>
 
   <blockquote>
-    <strong>{{ review.stars }} Stars</strong>
-    {{ review.body }}
-    <cite class="clearfix">by: {{ review.author }}</cite>
+    {{ review.message }}
+    <cite class="clearfix">by: {{ review.name }} - {{ review.email }}</cite>
   </blockquote>
 
   <div class="container">
@@ -11,15 +10,13 @@
       <div class="col-md-5">
         <h4>Submit a Review</h4>
         <fieldset class="form-group">
-          <select ng-model="review.stars" required class="form-control ng-pristine ng-invalid" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
-            <option value="">Rate the Product</option>
-          </select>
+          <input ng-model="review.name" required class="form-control ng-pristine ng-invalid" placeholder="Jimmy Dean" title="Name" />
         </fieldset>
         <fieldset class="form-group">
-          <textarea ng-model="review.body" required class="form-control ng-pristine ng-invalid" placeholder="Write a short review of the product..." title="Review"></textarea>
+          <textarea ng-model="review.message" required class="form-control ng-pristine ng-invalid" placeholder="Write a short review of the product..." title="Review"></textarea>
         </fieldset>
         <fieldset class="form-group">
-          <input ng-model="review.author" required type="email" class="form-control ng-pristine ng-invalid" placeholder="jimmyDean@example.org" title="Email" />
+          <input ng-model="review.email" required type="email" class="form-control ng-pristine ng-invalid" placeholder="jimmyDean@example.org" title="Email" />
         </fieldset>
         <fieldset class="form-group">
           <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
