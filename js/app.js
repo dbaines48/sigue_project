@@ -1,1 +1,1 @@
-angular.module('SigueProject', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap', 'angular-flippy']);
+angular.module('SigueProject', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap', 'angular-flippy', 'picardy.fontawesome']);
