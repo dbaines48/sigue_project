@@ -14,3 +14,7 @@
 .centered {
   text-align: center;
 }
+
+.left:hover, .right:hover {
+  cursor: pointer;
+}
