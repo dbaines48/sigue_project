@@ -77,6 +77,7 @@ angular.module('picardy.fontawesome', [])
 				_observeBooleanAttr('fw');
 				_observeBooleanAttr('inverse');
 				_observeBooleanAttr('spin');
+				_observeBooleanAttr('pulse');
 
 				/*** CONDITIONAL ATTRS ***/
 					// automatically populate fa-li if DOM structure indicates
