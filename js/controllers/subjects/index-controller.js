@@ -1,7 +1,8 @@
 angular.module('SigueProject')
 .controller('SubjectsIndexController', ['$scope', 'Subject', function($scope, Subject) {
-  $scope.hiddenValue = false;
+  $scope.isCollapsed = false;
+  
   $scope.matters = Subject.query(function(){
-    $scope.hiddenValue = true;
+    $scope.isCollapsed = true;
   });
 }]);

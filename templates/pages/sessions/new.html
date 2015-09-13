@@ -1,0 +1,19 @@
+<form name="loginForm" ng-submit="loginForm.$valid && login(session)" novalidate>
+  <div class="container">
+    <div class="row">
+      <h3 class="centered">Login</h3>
+      <br><br>
+      <div class="col-md-5 col-md-offset-4">
+        <fieldset class="form-group">
+          <input ng-model="session.email" required class="form-control ng-pristine ng-invalid" placeholder="Email or Username" type="text" />
+        </fieldset>
+        <fieldset class="form-group">
+          <input ng-model="session.password" required class="form-control ng-pristine ng-invalid" placeholder="Your Password" type="password" />
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="submit" class="btn btn-primary btn-block" value="Login" />
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</form>

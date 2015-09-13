@@ -17,6 +17,10 @@ angular.module('SigueProject')
       templateUrl: 'templates/pages/annexes/contact.html',
       controller: 'ContactController'
     })
+    .when('/login', {
+      templateUrl: 'templates/pages/sessions/new.html',
+      controller: 'SessionsNewController'
+    })
     .otherwise({
       redirectTo: '/home'
     });

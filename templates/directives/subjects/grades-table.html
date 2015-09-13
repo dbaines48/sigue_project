@@ -1,0 +1,16 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th class="centered">Period</th>
+      <th class="centered">Grade</th>
+      <th class="centered">Percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="grade in matter.grades">
+      <td class="centered">{{$index + 1}}</td>
+      <td class="centered">{{grade.grade}}</td>
+      <td class="centered">{{grade.percent}}</td>
+    </tr>
+  </tbody>
+</table>

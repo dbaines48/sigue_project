@@ -4,18 +4,20 @@ angular.module('SigueProject')
 
   $scope.slides = [{
     image: 'http://placekitten.com/602/300',
-    text: 'cat1'
+    text: 'cat1',
+    slogan: 'kitty1',
+    alignEnter: 'center-align'
   },
   {
     image: 'http://placekitten.com/603/300',
-    text: 'cat2'
+    text: 'cat2',
+    slogan: 'kitty2',
+    alignEnter: 'left-align'
   },
   {
     image: 'http://placekitten.com/604/300',
-    text: 'cat3'
+    text: 'cat3',
+    slogan: 'kitty3',
+    alignEnter: 'right-align'
   }];
-  
-  $scope.go = function(url){
-    $location.url(url);
-  };
 }]);
