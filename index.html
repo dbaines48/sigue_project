@@ -40,18 +40,33 @@
             <li class="hvr-underline-from-center" ng-class="{active: isActive('/subjects')}">
               <a href ng-click="go('/subjects')">Mis Materias</a>
             </li>
-            <li class="hvr-underline-from-center" ng-class="{active: isActive('/about')}">
+            <!-- <li class="hvr-underline-from-center" ng-class="{active: isActive('/about')}">
               <a href ng-click="go('/about')">About</a>
             </li>
             <li class="hvr-underline-from-center" ng-class="{active: isActive('/contact')}">
               <a href ng-click="go('/contact')">Contact</a>
+            </li> -->
+            <li ng-hide="isAuthenticated()" class="hvr-underline-from-center" ng-class="{active: isActive('/login')}">
+              <a href ng-click="go('/login')">Login</a>
+            </li>
+            
+            <li ng-show="isAuthenticated()" class="hvr-underline-from-center">
+              <a href ng-click="logout()">Logout</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div ng-view></div>
+    <div class="container">
+      <div ng-view></div>
+    </div>
+
+    <!-- <div id="footer" footer>
+      <div class="container">
+        <h4>ubicacion de esta chingada</h4>
+      </div>    
+    </div> -->
 
     <!-- Load Libraries -->
     <script src="libs/jquery/jquery.js"></script>
@@ -82,6 +97,7 @@
 
     <!-- Directives -->
     <script src="js/directives/subjects/grades-table.js"></script>
+    <script src="js/directives/footer.js"></script>
 
     <!-- Services -->
     <script src="js/services/subject.js"></script>

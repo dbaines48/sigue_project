@@ -1,15 +1,13 @@
-<div class="container">
-  <div class="centered" collapse="isCollapsed">
-    <h2>Sigue Project</h2>
-    <h4><fa name="spinner" size="2" pulse ng-style="{'color': '#2C3E50'}"></fa> Cargando...</h4>
+<div class="centered" collapse="isCollapsed">
+  <h2>Sigue Project</h2>
+  <h4><fa name="spinner" size="2" pulse ng-style="{'color': '#2C3E50'}"></fa> Cargando...</h4>
+</div>
+
+<div ng-repeat="matter in matters" class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title centered">Name: {{matter.name}} - Course: {{matter.course}}</h3>
   </div>
-  
-  <div ng-repeat="matter in matters" class="panel panel-info">
-    <div class="panel-heading">
-      <h3 class="panel-title centered">Name: {{matter.name}} - Course: {{matter.course}}</h3>
-    </div>
-    <div class="panel-body">
-      <grades-table matter="matter"></grades-table>
-    </div>
+  <div class="panel-body">
+    <grades-table matter="matter"></grades-table>
   </div>
 </div>
