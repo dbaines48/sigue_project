@@ -14,13 +14,15 @@
     "angular-animate": "~1.4.5",
     "angular-base64": "~2.0.5",
     "angular-bootstrap": "~0.13.4",
+    "angular-cookies": "~1.4.5",
     "angular-flippy": "*",
     "angular-fontawesome": "~0.4.0",
     "angular-resource": "~1.4.5",
     "angular-route": "~1.4.5",
     "bootbox.js": "bootbox#~4.4.0",
     "bootstrap": "~3.3.5",
-    "font-awesome": "fontawesome#~4.4.0"
+    "font-awesome": "fontawesome#~4.4.0",
+    "ngstorage": "~0.3.9"
   },
   "install": {
     "path": "libs"

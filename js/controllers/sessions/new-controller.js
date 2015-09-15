@@ -4,15 +4,16 @@ angular.module('SigueProject')
   $scope.isCollapsed = true;
 
   $scope.login = function(){
-    $scope.session.remember_me = true;
     for (var i = 0; i < 7; i++) {
       $scope.session.password = $base64.encode($scope.session.password)
     }
+
+    $scope.session.remember_me === undefined ? $scope.session.remember_me = false : $scope.session.remember_me
     
     $scope.isCollapsed = false;
 
     Session.login($scope.session).success(function(data){
-      Session.setToken(data.token);
+      Session.setToken(data.token, $scope.session.remember_me);
       $scope.session = {};
       $scope.isCollapsed = true;
       $location.url('/subjects');

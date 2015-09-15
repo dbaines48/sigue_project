@@ -5,4 +5,6 @@ angular.module('SigueProject',
   'ui.bootstrap', 
   'angular-flippy', 
   'picardy.fontawesome', 
-  'base64']);
+  'base64',
+  'ngCookies',
+  'ngStorage']);
