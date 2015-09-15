@@ -1,21 +1,6 @@
 angular.module('SigueProject')
-.controller('AboutController', ['$scope', function($scope){
-
-  $scope.authors = [{
-    image: 'http://i62.tinypic.com/314tu6t.jpg',
-    name: 'Alexander Taborda',
-    phone: '+57 300 4348412',
-    email: 'alextab93@gmail.com'
-  },
-  {
-    image: 'http://i60.tinypic.com/21nh9ih.jpg',
-    name: 'Fabian Betancur',
-    phone: '+57 300 7249114',
-  },
-  {
-    image: 'http://i62.tinypic.com/5y6fdi.jpg',
-    name: 'Daniel Blanco',
-    phone: '+57 300 3392676',
-    email: 'danielblancob48@gmail.com'
-  }];
+.controller('AboutController', ['$scope', 'About', function($scope, About){
+  About.all().success(function(data){
+    $scope.authors = data;
+  });
 }]);
